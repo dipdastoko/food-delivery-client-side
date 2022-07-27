@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './pages/Home/Home/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+
+/* 
+https://i.ibb.co/PM4jN8G/bhuna-khichuri.png
+https://i.ibb.co/L1sF7Fy/Chicken-Hyderabadi-Biryani-6-1.png
+https://i.ibb.co/9gGzR5S/Idli.png
+https://i.ibb.co/NZkG04s/Ilish-Pulao-7.png
+https://i.ibb.co/XxTWTHq/Mutton-Biryani-Goat-min.png
+https://i.ibb.co/t2jHJgQ/plain-dosa.png
+*/
