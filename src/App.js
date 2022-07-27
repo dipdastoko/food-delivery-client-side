@@ -2,16 +2,21 @@ import './App.css';
 import Home from './pages/Home/Home/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './pages/Login/Login';
+import AuthProvider from './ContextAPI/AuthProvider';
+import OrderFood from './pages/OrderFood/OrderFood';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path='login' element={<Login />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path='login' element={<Login />} />
+            <Route path='orderfood' element={<OrderFood />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
