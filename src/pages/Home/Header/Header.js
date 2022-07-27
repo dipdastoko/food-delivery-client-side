@@ -10,7 +10,7 @@ const Header = () => {
             <img className='banner' src={banner} alt="" />
             <Navbar bg="light" expand="lg">
                 <Container >
-                    <Navbar.Brand href="#home">FoodPick</Navbar.Brand>
+                    <Navbar.Brand href="#home">Healty Food</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">

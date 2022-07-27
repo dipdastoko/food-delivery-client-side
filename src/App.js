@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './pages/Home/Home/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from './pages/Login/Login';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
+          <Route path='login' element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>
