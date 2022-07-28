@@ -22,9 +22,9 @@ const Header = () => {
                             {!user.email ? <NavLink className='mx-4 my-1' to='/login'>Login</NavLink>
                                 :
                                 <>
-                                    <NavLink className='mx-4 my-1' to='/login'>My Orders</NavLink>
+                                    <NavLink className='mx-4 my-1' to='/myOrders'>My Orders</NavLink>
 
-                                    <NavLink className='mx-4 my-1' to='/login'>Manage All Orders</NavLink>
+                                    <NavLink className='mx-4 my-1' to='/allOrders'>Manage All Orders</NavLink>
 
                                     <NavLink className='mx-4 my-1' to='/login'>Add New Food</NavLink>
 

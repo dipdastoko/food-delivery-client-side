@@ -5,6 +5,8 @@ import Login from './pages/Login/Login';
 import AuthProvider from './ContextAPI/AuthProvider';
 import OrderFood from './pages/OrderFood/OrderFood';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import MyOrders from './pages/MyOrders/MyOrders';
+import ManageAllOrders from './pages/ManageAllOrders/ManageAllOrders';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path='home' element={<Home />} />
             <Route path='login' element={<Login />} />
+            <Route path='myOrders' element={<MyOrders />} />
+            <Route path='allOrders' element={<ManageAllOrders />} />
             <Route path='orderfood' element={<PrivateRoute><OrderFood /></PrivateRoute>} />
           </Routes>
         </BrowserRouter>
