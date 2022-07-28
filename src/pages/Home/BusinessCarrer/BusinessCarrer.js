@@ -4,7 +4,7 @@ import './BusinessCarrer.css';
 const BusinessCarrer = () => {
     return (
         <div className='text-start ms-5 mt-3'>
-            <h2 className='text-success'>Business & Carrer</h2>
+            <h2 className='text-success'>Business & Career</h2>
             <hr />
             <div className='d-flex justify-content-between mx-2'>
                 <div className='w-25'>

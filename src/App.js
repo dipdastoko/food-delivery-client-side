@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './pages/Login/Login';
 import AuthProvider from './ContextAPI/AuthProvider';
 import OrderFood from './pages/OrderFood/OrderFood';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path='login' element={<Login />} />
-            <Route path='orderfood' element={<OrderFood />} />
+            <Route path='orderfood' element={<PrivateRoute><OrderFood /></PrivateRoute>} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
