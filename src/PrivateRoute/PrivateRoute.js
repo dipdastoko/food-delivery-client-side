@@ -4,11 +4,19 @@ import useAuth from '../Hooks/useAuth';
 
 const PrivateRoute = ({ children }) => {
     const { firebase } = useAuth();
-    const { user } = firebase;
+    const { user, isLoading } = firebase;
     const location = useLocation();
-    return (
-        user.email ? children : <Navigate replace to='/login' state={{ from: location }}></Navigate>
-    );
+    if (isLoading) {
+        return <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    }
+    else {
+        return (
+            user.email ? children : <Navigate replace to='/login' state={{ from: location }}></Navigate>
+        );
+    }
+
 };
 
 export default PrivateRoute;

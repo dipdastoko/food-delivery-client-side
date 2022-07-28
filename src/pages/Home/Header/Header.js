@@ -21,7 +21,7 @@ const Header = () => {
                             <NavLink to='/home' className='my-1'>Home</NavLink>
                             {!user.email ? <NavLink className='mx-4 my-1' to='/login'>Login</NavLink>
                                 :
-                                <NavLink className='mx-4 my-1' to='/login'><button onClick={logOut} className='btn btn-primary'>Log Out</button></NavLink>
+                                <NavLink className='mx-4 my-1' to='/'><button onClick={logOut} className='btn btn-primary'>Log Out</button></NavLink>
                             }
                         </Nav>
                     </Navbar.Collapse>

@@ -8,7 +8,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const { firebase } = useAuth();
-    const { signInUsingGoogle, setUser } = firebase;
+    const { signInUsingGoogle, setUser, setIsLoading } = firebase;
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -21,6 +21,7 @@ const Login = () => {
                 console.log(result.user);
                 navigate(destination);
             })
+            .finally(setIsLoading(false))
     }
     return (
         <div>
