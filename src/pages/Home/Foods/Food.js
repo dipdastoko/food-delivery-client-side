@@ -3,12 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
 
 const Food = ({ food }) => {
-    const { img, name, price } = food;
+    const { img, name, price, _id } = food;
 
     const navigate = useNavigate();
 
     const handleOrderFood = () => {
-        navigate('/orderfood');
+        navigate(`/orderfood/${_id}`);
     }
 
     return (

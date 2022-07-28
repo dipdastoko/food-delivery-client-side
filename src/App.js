@@ -19,7 +19,7 @@ function App() {
             <Route path='login' element={<Login />} />
             <Route path='myOrders' element={<MyOrders />} />
             <Route path='allOrders' element={<ManageAllOrders />} />
-            <Route path='orderfood' element={<PrivateRoute><OrderFood /></PrivateRoute>} />
+            <Route path='orderfood/:foodId' element={<PrivateRoute><OrderFood /></PrivateRoute>} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
