@@ -7,8 +7,8 @@ const PrivateRoute = ({ children }) => {
     const { user, isLoading } = firebase;
     const location = useLocation();
     if (isLoading) {
-        return <div class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
+        return <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
         </div>
     }
     else {
