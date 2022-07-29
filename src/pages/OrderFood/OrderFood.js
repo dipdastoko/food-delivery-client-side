@@ -31,6 +31,8 @@ const OrderFood = () => {
     }
 
     const handleOrderNow = e => {
+        e.preventDefault();
+
         const confirm = window.confirm('Click ok to confirm');
         if (confirm) {
             fetch('http://localhost:5000/orders', {
@@ -43,7 +45,8 @@ const OrderFood = () => {
                 .then(res => res.json())
                 .then(data => console.log(data));
         }
-        e.preventDefault();
+
+
     }
     return (
         <Container>
@@ -60,7 +63,7 @@ const OrderFood = () => {
                 <Col>
                     <div>
                         <h5>Provide Information</h5>
-                        <form className="row g-3">
+                        <form onSubmit={handleOrderNow} className="row g-3">
                             {/* Email Field */}
                             <div className="col-md-6">
                                 <label htmlFor="inputEmail4" className="form-label">Email</label>
@@ -87,7 +90,7 @@ const OrderFood = () => {
 
                             {/* Submit Button */}
                             <div className="col-12">
-                                <button onSubmit={handleOrderNow} type="submit" className="btn btn-primary">Order Now</button>
+                                <button type="submit" className="btn btn-primary">Order Now</button>
                             </div>
                         </form>
                     </div>
