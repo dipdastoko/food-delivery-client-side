@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
 
     const handleApprove = id => {
         const orderToApprove = allOrders.find(order => order._id === id);
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://polar-hamlet-57469.herokuapp.com/updateStatus/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

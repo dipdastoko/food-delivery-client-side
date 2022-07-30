@@ -29,7 +29,7 @@ const AddNewFood = () => {
         e.preventDefault();
         const confirm = window.confirm('Are you sure?');
         if (confirm) {
-            fetch('http://localhost:5000/newFood', {
+            fetch('https://polar-hamlet-57469.herokuapp.com/newFood', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

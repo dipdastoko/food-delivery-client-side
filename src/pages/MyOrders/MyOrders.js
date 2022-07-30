@@ -5,7 +5,7 @@ export const handleCancelOrder = id => {
     const confirm = window.confirm('Cancel Order. Are you sure?');
 
     if (confirm) {
-        fetch(`http://localhost:5000/cancelOrder/${id}`, {
+        fetch(`https://polar-hamlet-57469.herokuapp.com/cancelOrder/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -38,7 +38,7 @@ const OrderFood = () => {
 
         const confirm = window.confirm('Click ok to confirm');
         if (confirm) {
-            fetch('http://localhost:5000/orders', {
+            fetch('https://polar-hamlet-57469.herokuapp.com/orders', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
