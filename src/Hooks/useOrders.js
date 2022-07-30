@@ -7,7 +7,7 @@ const useOreders = () => {
         fetch('http://localhost:5000/getOrders')
             .then(res => res.json())
             .then(data => setOrders(data));
-    }, [])
+    }, [orders])
 
     return orders;
 }

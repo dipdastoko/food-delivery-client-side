@@ -1,5 +1,6 @@
 import React from 'react';
 import useAuth from '../../Hooks/useAuth';
+import { handleCancelOrder } from '../MyOrders/MyOrders';
 
 const ManageAllOrders = () => {
     const { allOrders } = useAuth();
@@ -16,7 +17,7 @@ const ManageAllOrders = () => {
                                 <h5>{order.name}</h5>
                             </div>
                             <p>Price: {order.price}tk</p>
-                            <button className='btn btn-primary'>Cancel Order</button>
+                            <button onClick={() => handleCancelOrder(order._id)} className='btn btn-primary'>Cancel Order</button>
                         </div>
                         <div>
                             <h2>To</h2>
