@@ -6,7 +6,7 @@ const useFoods = () => {
         fetch('http://localhost:5000/foods')
             .then(res => res.json())
             .then(data => setFoods(data));
-    }, []);
+    }, [foods]);
     return {
         foods
     }

@@ -7,6 +7,7 @@ import OrderFood from './pages/OrderFood/OrderFood';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import MyOrders from './pages/MyOrders/MyOrders';
 import ManageAllOrders from './pages/ManageAllOrders/ManageAllOrders';
+import AddNewFood from './pages/AddNewFood/AddNewFood';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path='login' element={<Login />} />
             <Route path='myOrders' element={<MyOrders />} />
             <Route path='allOrders' element={<ManageAllOrders />} />
+            <Route path='addNewFood' element={<AddNewFood />} />
             <Route path='orderfood/:foodId' element={<PrivateRoute><OrderFood /></PrivateRoute>} />
           </Routes>
         </BrowserRouter>

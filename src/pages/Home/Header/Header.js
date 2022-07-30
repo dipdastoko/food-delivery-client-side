@@ -26,7 +26,7 @@ const Header = () => {
 
                                     <NavLink className='mx-4 my-1' to='/allOrders'>Manage All Orders</NavLink>
 
-                                    <NavLink className='mx-4 my-1' to='/login'>Add New Food</NavLink>
+                                    <NavLink className='mx-4 my-1' to='/addNewFood'>Add New Food</NavLink>
 
                                     <NavLink className='mx-4 my-1' to='/'><button onClick={logOut} className='btn btn-primary'>Log Out</button></NavLink>
                                 </>
