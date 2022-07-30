@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
@@ -11,6 +12,8 @@ const OrderFood = () => {
 
     const selectedFood = foods.find(food => food._id === foodId);
     const { name, img, price, description } = selectedFood;
+
+    const navigate = useNavigate();
 
     // values from the fields
     const [phone, setPhone] = useState('');
@@ -27,7 +30,7 @@ const OrderFood = () => {
     }
 
     const orderDetails = {
-        email: firebase.user.email, phone, address, address2
+        name, img, price, email: firebase.user.email, phone, address, address2
     }
 
     const handleOrderNow = e => {
@@ -43,7 +46,12 @@ const OrderFood = () => {
                 body: JSON.stringify(orderDetails)
             })
                 .then(res => res.json())
-                .then(data => console.log(data));
+                .then(data => {
+                    console.log(data);
+                    alert(`order confirmed`);
+                    navigate('/');
+
+                });
         }
 
 
