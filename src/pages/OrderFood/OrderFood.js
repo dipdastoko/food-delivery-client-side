@@ -30,7 +30,7 @@ const OrderFood = () => {
     }
 
     const orderDetails = {
-        name, img, price, email: firebase.user.email, phone, address, address2
+        name, img, price, email: firebase.user.email, phone, address, address2, status: 'Pending'
     }
 
     const handleOrderNow = e => {
@@ -47,7 +47,6 @@ const OrderFood = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     alert(`order confirmed`);
                     navigate('/');
 

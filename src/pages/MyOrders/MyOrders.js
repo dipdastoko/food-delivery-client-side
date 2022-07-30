@@ -9,7 +9,7 @@ export const handleCancelOrder = id => {
             method: 'DELETE'
         })
             .then(res => res.json())
-            .then(data => console.log(data));
+            .then(data => alert('order cancelled'));
     }
 };
 
@@ -30,7 +30,9 @@ const MyOrders = () => {
                             <h5>{order.name}</h5>
                         </div>
                         <p>Price: {order.price}tk</p>
-                        <button onClick={() => handleCancelOrder(order._id)} className='btn btn-primary'>Cancel Order</button>
+                        <p>Status: <span className={order.status === 'Pending' ? 'text-dark bg-warning p-1 rounded-2' : 'text-white bg-primary p-1 rounded-2'}>{order.status}</span></p>
+
+                        <button onClick={() => handleCancelOrder(order._id)} className='btn btn-danger'>Cancel Order</button>
                     </div>
                 )
             }

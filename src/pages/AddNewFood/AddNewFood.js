@@ -27,7 +27,6 @@ const AddNewFood = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log('hello');
         const confirm = window.confirm('Are you sure?');
         if (confirm) {
             fetch('http://localhost:5000/newFood', {

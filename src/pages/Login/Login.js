@@ -13,12 +13,11 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const destination = location.state?.from.pathname || '/';
-    console.log(destination);
+    // console.log(destination); renders many time
     const handleLogin = () => {
         signInUsingGoogle()
             .then(result => {
                 setUser(result.user);
-                console.log(result.user);
                 navigate(destination);
             })
             .finally(setIsLoading(false))
