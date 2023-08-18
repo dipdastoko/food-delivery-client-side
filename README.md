@@ -1,4 +1,4 @@
-# Healtht-Food(A Food Delivery Website) 
+# Healthy-Food(A Food Delivery Website) 
 https://healtht-food.web.app/
 
 ## Functionality
